@@ -346,7 +346,7 @@ ln -sf linux-%{uname_r}.cfg /boot/mariner.cfg
 %{_sysconfdir}/bash_completion.d/bpftool
 
 %changelog
-* Thu Feb 11 2022 Vince Perri <viperri@microsoft.com> - 5.15.2.1-6
+* Fri Feb 11 2022 Vince Perri <viperri@microsoft.com> - 5.15.2.1-6
 - Add support for compressed firmware
 - Bump release number to match kernel release
 

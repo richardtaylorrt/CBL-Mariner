@@ -153,7 +153,7 @@ ln -sf linux-%{uname_r}.cfg /boot/mariner.cfg
 %exclude /module_info.ld
 
 %changelog
-* Thu Feb 11 2022 Vince Perri <viperri@microsoft.com> - 5.15.2.1-6
+* Fri Feb 11 2022 Vince Perri <viperri@microsoft.com> - 5.15.2.1-6
 - Bump release number to match kernel release
 
 * Thu Feb 03 2022 Henry Li <lihl@microsoft.com> - 5.15.2.1-5

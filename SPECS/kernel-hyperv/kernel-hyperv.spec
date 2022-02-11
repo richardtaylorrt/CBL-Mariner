@@ -256,7 +256,7 @@ ln -sf linux-%{uname_r}.cfg /boot/mariner.cfg
 %{_includedir}/perf/perf_dlfilter.h
 
 %changelog
-* Thu Feb 11 2022 Vince Perri <viperri@microsoft.com> - 5.15.2.1-6
+* Fri Feb 11 2022 Vince Perri <viperri@microsoft.com> - 5.15.2.1-6
 - Add support for compressed firmware
 
 * Thu Feb 03 2022 Henry Li <lihl@microsoft.com> - 5.15.2.1-5
