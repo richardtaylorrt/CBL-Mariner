@@ -4,7 +4,7 @@
 Summary:        Linux Kernel optimized for Hyper-V
 Name:           kernel-hyperv
 Version:        5.15.2.1
-Release:        5%{?dist}
+Release:        6%{?dist}
 License:        GPLv2
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -256,8 +256,11 @@ ln -sf linux-%{uname_r}.cfg /boot/mariner.cfg
 %{_includedir}/perf/perf_dlfilter.h
 
 %changelog
-* Thu Feb 11 2022 Vince Perri <viperri@microsoft.com> - 5.15.2.1-5
+* Thu Feb 11 2022 Vince Perri <viperri@microsoft.com> - 5.15.2.1-6
 - Add support for compressed firmware
+
+* Thu Feb 03 2022 Henry Li <lihl@microsoft.com> - 5.15.2.1-5
+- Enable CONFIG_X86_SGX and CONFIG_X86_SGX_KVM
 
 * Wed Feb 02 2022 Rachel Menge <rachelmenge@microsoft.com> - 5.15.2.1-4
 - Add libperf-jvmti.so to tools package
