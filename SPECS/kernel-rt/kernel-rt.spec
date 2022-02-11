@@ -4,7 +4,7 @@
 Summary:        Realtime Linux Kernel
 Name:           kernel-rt
 Version:        5.15.2.1
-Release:        4%{?dist}
+Release:        5%{?dist}
 License:        GPLv2
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -346,6 +346,9 @@ ln -sf linux-%{uname_r}.cfg /boot/mariner.cfg
 %{_sysconfdir}/bash_completion.d/bpftool
 
 %changelog
+* Thu Feb 11 2022 Vince Perri <viperri@microsoft.com> - 5.15.2.1-5
+- Add support for compressed firmware
+
 * Thu Feb 03 2022 Cameron Baird <cameronbaird@microsoft.com> - 5.15.2.1-4
 - Bump release number to match kernel release
 
