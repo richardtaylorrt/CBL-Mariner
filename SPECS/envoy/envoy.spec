@@ -21,8 +21,8 @@
 %define src_install_dir %{_prefix}/src/%{name}
 Summary:        L7 proxy and communication bus
 Name:           envoy
-Version:        1.14.4
-Release:        4%{?dist}
+Version:        1.21.0
+Release:        1%{?dist}
 License:        ASL 2.0
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -95,12 +95,9 @@ Source1:        %{name}-%{version}-vendor.tar.gz
 # END obs-service-bazel_repositories
 Source100:      %{name}-rpmlintrc
 Patch0:         0001-build-Use-Go-from-host.patch
-Patch1:         0002-build-update-several-go-dependencies-11581.patch
-Patch2:         0003-build-Add-explicit-requirement-on-rules_cc.patch
-Patch3:         0004-build-Use-new-bazel.patch
 BuildRequires:  bazel
 BuildRequires:  bazel-workspaces
-BuildRequires:  boringssl-source
+#BuildRequires:  boringssl-source
 BuildRequires:  c-ares-devel
 BuildRequires:  cmake
 BuildRequires:  fdupes
@@ -178,8 +175,6 @@ Provides:       bundled(zipkin-api) = 0.2.2
 # END obs-service-bazel_repositories
 ExcludeArch:    %{ix86}
 
-# Temp: Do not build with 2.0 toolchain
-ExclusiveArch:  mips
 
 %description
 Envoy is an L7 proxy and communication bus designed for large modern service
@@ -235,11 +230,12 @@ CC=gcc CXX=g++ bazel --batch build \
     --cxxopt="-Wno-implicit-fallthrough"\
     --copt="-Wno-return-type" \
     --cxxopt="-Wno-return-type" \
+    --copt="-Wno-error=vla-parameter" \
+    --cxxopt="-Wno-error=vla-parameter" \
     --curses=no \
     --host_force_python=PY3 \
     --repository_cache=BAZEL_CACHE \
     --strip=never \
-    --override_repository="boringssl=%{_prefix}/src/boringssl/" \
     --override_repository="com_github_curl=%{_datadir}/bazel-workspaces/curl" \
     --override_repository="com_github_nghttp2_nghttp2=%{_datadir}/bazel-workspaces/nghttp2" \
     --override_repository="zlib=%{_datadir}/bazel-workspaces/zlib" \
