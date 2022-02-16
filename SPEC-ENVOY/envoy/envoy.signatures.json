@@ -1,6 +1,5 @@
 {
  "Signatures": {
-  "envoy-1.21.0-vendor.tar.gz": "3fe24b7ec6e95ebb7db71b1c22a9f28fb5144f26543abbd41bf994285657ee94",
   "envoy-1.21.0.tar.gz": "5fc280c5dd60b817bbc801f0c29ed5efea9d74b3d7d381bc940c61171b40963b",
   "envoy-rpmlintrc": "8b9331ceac885edc8b87416a9651496a88b03b6c6ff3bc836f8fcc3ad26eaa09"
  }
