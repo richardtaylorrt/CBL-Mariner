@@ -95,6 +95,7 @@ Source1:        %{name}-%{version}-vendor.tar.gz
 # END obs-service-bazel_repositories
 Source100:      %{name}-rpmlintrc
 Patch0:         0001-build-Use-Go-from-host.patch
+Patch1:         0002-disable-wee8-mismatched-new-delete-warning.patch
 BuildRequires:  bazel
 BuildRequires:  bazel-workspaces
 #BuildRequires:  boringssl-source
