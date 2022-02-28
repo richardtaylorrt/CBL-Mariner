@@ -1,0 +1,28 @@
+{
+    "Disks": [
+        {
+            "Artifacts": [
+                {
+                    "Name": "mariner-rootfs",
+                    "Compression": "tar.gz"
+                }
+            ]
+        }
+    ],
+    "SystemConfigs": [
+        {
+            "Name": "Standard",
+            "PackageLists": [
+                "packagelists/core-packages-image-aarch64.json"
+            ],
+            "RemoveRpmDb": true,
+            "Hostname": "mariner",
+            "Users": [
+                {
+                    "Name": "root",
+                    "Password": "p@ssw0rd"
+                }
+            ]
+        }
+    ]
+}
